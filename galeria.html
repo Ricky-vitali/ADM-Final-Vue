@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1., user-scalable = no" />
+    <title>Ricardo Juan Vitali - DWTM2A 2020 Parcial 1</title>
+
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+
+    <nav id="menu">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbuton">
+            <span class="icon-navicon"></span>
+        </label>
+        <h1>First Food</h1>
+
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+
+        </ul>
+
+    </nav>
+
+    <section>
+        <h2>Mis Recetas</h2>
+
+        <!-- 
+        <form action="">
+
+            <label for="name">Nombre </label>
+            <input type="text">
+
+            <label for="name">Descripcion </label>
+            <input type="text">
+            <button>Editar</button>
+            <button>Cancelar</button>
+
+        </form> -->
+
+        <div class="formContainer">
+
+            <p>Crear receta</p>
+
+            <form action="">
+
+                <label for="name">Nombre </label>
+                <input type="text">
+    
+                <label for="name">Descripcion </label>
+                <input type="text">
+
+                <div>
+                    <button class="editButton">Editar</button>
+                    <button class="deleteButton">Cancelar</button>
+                </div>
+    
+            </form>
+            <!-- <form v-else action="" @submit.prevent="agregarreceta">
+
+                <label for="name">Titulo </label><input type="text" name="name" id="name" v-model="nuevoTitulo">
+                <label for="recipe">Receta </label><textarea type="text" name="name" id="name"
+                    v-model="nuevoreceta"></textarea>
+                <input type="submit" value="Crear">
+
+            </form> -->
+
+        </div>
+
+        <div v-for="(item, index) of recetas">
+            
+            <div class="recetaCard">
+                <ul>
+                    <li>Titulo</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem iste expedita
+                        exercitationem quia aliquid odio reprehenderit rem, explicabo, ea incidunt placeat dicta. Quam
+                        nemo id obcaecati ipsum distinctio expedita.</li>
+                </ul>
+                <div class="recetaButtons">
+                    <button @click="prepararEditar(index,item)" class="editButton">Editar</button>
+                    <button @click="eliminarreceta(index)" class="deleteButton">Borrar</button>
+                </div>
+            </div>
+            <div class="recetaCard">
+                <ul>
+                    <li>Titulo</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem iste expedita
+                        exercitationem quia aliquid odio reprehenderit rem, explicabo, ea incidunt placeat dicta. Quam
+                        nemo id obcaecati ipsum distinctio expedita.Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Aperiam quidem iste expedita
+                        exercitationem quia aliquid odio reprehenderit rem, explicabo, ea incidunt placeat dicta. Quam
+                        nemo id obcaecati ipsum distinctio expedita.</li>
+                </ul>
+                <div class="recetaButtons">
+                    <button @click="prepararEditar(index,item)" class="editButton">Editar</button>
+                    <button @click="eliminarreceta(index)" class="deleteButton">Borrar</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+ <!--    <section>
+        <h2>Mis Recetas</h2>
+        
+        
+        <form v-if="editing" action="" @submit.prevent="editarreceta">
+
+            <label for="name">Nombre </label>
+            <input type="text" v-model="tituloEditado" v-on:keyup.enter="editarreceta">
+
+            <label for="name">Descripcion </label>
+            <input type="text" v-model="recetaEditado" v-on:keyup.enter="editarreceta">
+            <button @click="editarreceta">Editar</button>
+            <button @click="editing = false; this.recetaEditado = ''; this.pIndexToEdit = null">Cancelar</button>
+
+        </form>
+
+        <form v-else action="" @submit.prevent="agregarreceta">
+
+            <label for="name">Titulo </label><input type="text" name="name" id="name" v-model="nuevoTitulo">
+            <label for="recipe">Receta </label><textarea type="text" name="name" id="name" v-model="nuevoreceta"></textarea>
+            <input type="submit" value="Crear">
+            
+        </form>
+
+        <div v-for="(item, index) of recetas">
+
+            <p>{{index}}-{{item.titulo}}</p>
+            <p>{{item.receta}}</p>
+
+            <button @click="prepararEditar(index,item)">Editar</button>
+            <button @click="eliminarreceta(index)">Borrar</button>
+        </div>
+
+    </section> -->
+
+    <!-- <section>
+        <div class="galeria"></div>
+
+        <h2>Galeria</h2>
+       
+        <div class="card">
+            <img src="imagenes/galeriaUno.jpg" alt="">
+            <div class="cardTexto">
+                <span>Las mejores papas</span>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/galeriaDos.jpg" alt="">
+            <div class="cardTexto">
+                <span>La mejor combinación</span>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/galeriaTres.jpg" alt="">
+            <div class="cardTexto">
+                <span>La mejor Pizza</span>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/galeriaCuatro.jpg" alt="">
+            <div class="cardTexto">
+                <span>El mejor Dúo</span>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="imagenes/galeriaCinco.jpg" alt="">
+            <div class="cardTexto">
+                <span>La mejor comida</span>
+
+            </div>
+        </div>
+
+
+
+
+    </section> -->
+
+</body>
+
+</html>

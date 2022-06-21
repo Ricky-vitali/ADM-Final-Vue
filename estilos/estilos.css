@@ -1,0 +1,580 @@
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/Lato-Regular.ttf');
+
+}
+
+* {
+    font-family: lato;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+
+/* Nav*/
+
+nav {
+    background-color: #282932;
+    height: 120px;
+    width: 100%;
+   
+}
+
+nav h1 {
+    background-image: url('../imagenes/hamburguesaLogo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 100px;
+    margin-left: 10%;
+    height: 90px;
+    font-size: 0;
+}
+
+nav ul {
+    /* Quiza tenga que clavar un z index por aca*/
+    position: fixed;
+    top: 0;
+    right: 5%;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+}
+
+nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+
+.checkbuton {
+    z-index: 9999;
+    font-size: 30px;
+    color: whitesmoke;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    display: block;
+    border-radius: 7px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, .55);
+    background-color: rgba(0, 0, 0, .35);
+
+}
+
+
+
+#check {
+    display: none;
+}
+
+/*** Tablet ***/
+
+@media (max-width: 992px) {
+
+    /* Nav*/
+
+    .checkbuton {
+        display: block;
+
+
+    }
+
+    nav ul {
+        z-index: 5;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #282932;
+        text-align: center;
+        transition: all .3s;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+}
+
+
+/*** Desktop ***/
+
+
+@media (min-width: 992px) {
+
+    /* nav*/
+
+
+    nav {
+        z-index: 10;
+        background-color: #282932;
+        height: 100px;
+        width: 100%;
+    }
+
+    nav h1 {
+        background-image: url('../imagenes/hamburguesaLogo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 0 100px;
+        margin-left: 10%;
+        height: 90px;
+        font-size: 0;
+    }
+
+    nav ul {
+        /* Quiza tenga que clavar un z index por aca*/
+        position: absolute;
+        top: 0;
+        right: 5%;
+        margin-right: 20px;
+
+    }
+
+    nav ul li {
+        font-size: 18px;
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+
+    }
+
+    nav ul li a {
+        color: whitesmoke;
+        padding: 7px 13px;
+        border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+        color: whitesmoke;
+        text-decoration: none;
+        background: #d0a85c;
+        transition: .7s;
+    }
+
+
+
+    .checkbuton {
+        font-size: 30px;
+        color: whitesmoke;
+        position: fixed;
+        line-height: 80px;
+        top: 0;
+        right: 5%;
+        cursor: pointer;
+        display: none;
+
+    }
+
+    #check {
+        display: none;
+    }
+}
+
+
+
+header {
+    display: flex;
+    background-image: url('../imagenes/headerBurger2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    height: 600px;
+    width: 100%;
+    color: whitesmoke;
+
+}
+
+
+
+/* Header */
+
+
+#textoHeader {
+    width: 50%;
+    font-size: 23px;
+    margin-right: 35%;
+    margin-top: 100px;
+}
+
+#textoHeader p {
+    margin-top: 15px;
+    width: 370px;
+}
+
+
+
+
+
+
+header a {
+    display: inline-block;
+    padding: .6em 1.25em;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 1.1em;
+    font-weight: 550;
+    color: whitesmoke;
+    border-radius: 25px;
+    background: #d0a85c;
+    text-decoration: none;
+}
+
+
+header a:hover {
+    color: black;
+    text-decoration: none;
+    background: whitesmoke;
+    transition: .7s;
+}
+
+
+/* Populares */
+
+
+
+
+.popular {
+    text-align: center;
+    padding-bottom: 75px;
+}
+
+.popular h2 {
+    font-size: 33px;
+}
+
+
+.cardConsejo{
+    display: flex !important; 
+}
+
+
+/* Menu */
+
+section {
+    padding-bottom: 75px;
+}
+
+section h2 {
+
+    text-align: center;
+    border-bottom: 3px solid #d0a85c;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 33px;
+
+}
+
+
+
+.menues h3 {
+    font-size: 20px;
+    color: #5a5858;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.comidas {
+    padding-bottom: 25px;
+    padding-top: 25px;
+
+}
+
+.pancho {
+    margin-bottom: 30px;
+}
+
+/* Galeria */
+
+.galeria{
+    text-align: center;
+}
+
+
+.galeria img{
+    transition: 0.8s;
+}
+
+.galeria img:hover{
+    transform: scale(1.03);
+    
+}
+
+.galeria p{
+    margin-bottom: 30px;
+}
+
+
+.card{
+    display: inline-block;
+    width: 70%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.defaultRecetasCard{
+    display: flex !important; 
+    background-color: #ececec;
+}
+
+.cardTexto{
+    text-align: center;
+    position: relative;
+    bottom: 38px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, .75);
+    color: whitesmoke;
+}
+
+/* Instalar*/
+
+.instalar {
+    display: none;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 10px;
+    min-height: 10%;
+    position: fixed;
+    bottom: 0;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-size: 18px;
+    flex-grow: 1;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    background: rgb(230, 230, 230) url('../imagenes/hamburguesaLogo72.png') no-repeat 5% 50%;
+}
+
+@keyframes efecto {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    from {
+        opacity: 0;
+        transform: translate3d(0, 3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, 10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, -5px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.efecto {
+    animation-name: efecto;
+}
+
+
+/* Mis Receta */
+
+h3{
+    text-align: center;
+}
+
+.recetasTitulo{
+    margin-top: 15px;
+}
+
+
+
+.formContainer{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 25px 20px 25px 20px;
+    width: 50%;
+    margin-top: 25px;
+}
+
+.formContainer input{
+    border: rgba(53, 53, 53, 0.342);
+    padding: 10px;
+}
+
+.formContainer textarea{
+    border: rgba(53, 53, 53, 0.342);
+    padding: 10px;
+}
+
+.formContainer p{
+
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.formContainer form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formContainer label{
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.formContainer input[type="submit"]{
+    border: none;
+    background-color: #1b9bff;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+
+
+
+
+.recetaCard{
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 25px 20px 25px 20px;
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.recetaCard li{
+    margin-right: 10px;
+}
+
+
+.recetaCard li:first-of-type{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.recetaButtons{
+    display: flex;
+    align-items: center;
+}
+
+
+.editButton{
+ 
+    border-radius: 5px;
+    border: 1px solid #666666;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    background-color: #1b9bff;
+    color: whitesmoke;
+    font-size: 18px;
+    padding: 5px;
+    margin-right: 10px;
+    height:30px;
+
+
+}
+
+.deleteButton{
+
+    border-radius: 5px;
+    border: 1px solid #666666;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    background-color: rgb(194, 7, 7);
+    color: whitesmoke;
+    font-size: 18px;
+    padding: 5px;
+    height:30px;
+}
+
+/* Footer*/
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    height: 50px;
+    margin-top: 1em;
+    background-color: rgb(30, 32, 44);
+    color: whitesmoke;
+    line-height: 50px;
+    text-align: center;
+
+    
+
+
+}
+
+
+footer ul {
+    line-height: 30px;
+    display: contents;
+    list-style-type: none;
+
+}
+
+footer a {
+    color: white;
+
+}
+
+
+.footerUno {
+    margin-left: 10%;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: whitesmoke;
+    text-decoration: none;
+    background: #1b9bff;
+    transition: .7s;
+}
+
+footer p {
+    text-align: center;
+}

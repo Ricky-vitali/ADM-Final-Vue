@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1., user-scalable = no" />
+    <title>Ricardo Juan Vitali - DWTM2A 2020 Parcial 1</title>
+    <!-- Recordar de cambiar el title -->
+
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/bootstrap.css">
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <link rel="stylesheet" href="fonts/style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <script src="./bootstrap-5.1.3-dist/bootstrap.js" defer></script>
+
+
+
+</head>
+
+
+<body>
+    <div id="app">
+        <nav id="receta">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbuton">
+                <span class="icon-navicon"></span>
+            </label>
+            <h1>First Food</h1>
+
+            <ul>
+                <li>
+                    <router-link to="/">Inicio</router-link>
+                </li>
+                <li>
+                    <router-link to="/receta">Recetas</router-link>
+                </li>
+                <li>
+                    <router-link to="/consejo">Consejos</router-link>
+                </li>
+                <li>
+                    <router-link to="/resenas">Mis recetas</router-link>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+
+        <!--   <header>
+
+            <div id="textoHeader">
+
+                <h2>Comida Rapida</h2>
+                <p>Pedi la mejor comida rapida con nosotros, echale un vistazo a nuestro menú.</p>
+
+             <a href="receta.html">Ver Menú</a> 
+
+
+            </div>
+
+
+
+        </header> -->
+
+        <router-view></router-view>
+<!-- 
+        <div>
+            <h2>Testeo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quos, fugiat, quae facere tempore
+                ducimus sequi, veritatis assumenda laboriosam modi libero amet facilis excepturi deserunt unde beatae
+                saepe cupiditate fugit!</p>
+        </div> -->
+
+        <footer>
+            
+                Derechos de Autor &copy; Ricardo Vitali 2021
+           
+
+        </footer>
+
+    </div>
+    <script src="scriptsw.js"></script>
+    <script src="application.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/router/vue-router.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+
+
+</body>
+
+</html>
